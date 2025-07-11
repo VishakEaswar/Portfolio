@@ -202,7 +202,7 @@ const About = () => {
                 <strong>Name:</strong> Vishak KV <br />
                 <strong>Email:</strong>{' '}
                 <Link href="mailto:vishakkv.dev@gmail.com" sx={{ color: '#2e8bc0' }}>
-                  vishakkv.dev@gmail.com
+                  vishakeaswer@gmail.com
                 </Link><br />
                 <strong>Phone:</strong>{' '}
                 {/* <Link href="tel:+919876543210" sx={{ color: '#2e8bc0' }}> */}
