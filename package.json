@@ -1,5 +1,5 @@
 {
-  "homepage":"https://vishakeaswar.github.io/Porofolio/",
+  "homepage": "https://vishakeaswar.github.io/Porofolio/",
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
@@ -23,6 +23,7 @@
     "pdfjs-dist": "^5.3.93",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0",
     "react-pdf": "^10.0.1",
     "react-router-dom": "^7.6.3",
     "sudoku": "^0.0.3"

@@ -17,6 +17,14 @@ import {
 } from '@mui/lab';
 
 import { GitHub, LinkedIn, Facebook, Instagram } from '@mui/icons-material';
+import {
+  SiReact,
+  SiJavascript,
+  SiHtml5,
+  SiCss3,
+  SiBootstrap,
+  SiFirebase
+} from 'react-icons/si';
 
 
 const About = () => {
@@ -70,7 +78,6 @@ const About = () => {
               <Typography variant="body1" sx={{ lineHeight: 2 }}>
                 - Build reusable components and responsive layouts using React and MUI. <br />
                 - Integrate APIs and manage dynamic data using state management. <br />
-                - Focus on performance, accessibility, and SEO. <br />
                 - Create real-world apps including dashboards, admin panels, and service platforms.
               </Typography>
             </Grid>
@@ -88,24 +95,38 @@ const About = () => {
             <Grid item xs={12} sm={8}>
               <Grid container spacing={2}>
                 <Grid item xs={6}>
-                  <ul style={{ paddingLeft: 20, margin: 0, lineHeight: 2 }}>
-                    <li>React.js</li>
-                    <li>JavaScript (ES6+)</li>
-                    <li>HTML5 & CSS3</li>
-                    <li>Material UI</li>
+                  <ul style={{ paddingLeft: 0, listStyle: 'none', margin: 0, lineHeight: 2 }}>
+                    <li style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                      <SiReact color="#61DBFB" size={18} /> React.js
+                    </li>
+                    <li style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                      <SiJavascript color="#f7df1e" size={18} /> JavaScript (ES6+)
+                    </li>
+                    <li style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                      <SiHtml5 color="#e34c26" size={18} /> HTML5
+                    </li>
+                    <li style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                      <SiCss3 color="#264de4" size={18} /> CSS3
+                    </li>
                   </ul>
                 </Grid>
                 <Grid item xs={6}>
-                  <ul style={{ paddingLeft: 20, margin: 0, lineHeight: 2 }}>
-                    <li>Bootstrap</li>
-                    <li>Firebase</li>
-                    <li>Git & GitHub</li>
-                    <li>Framer Motion</li>
+                  <ul style={{ paddingLeft: 0, listStyle: 'none', margin: 0, lineHeight: 2 }}>
+                    <li style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                      Material UI
+                    </li>
+                    <li style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                      <SiBootstrap color="#7910f2" size={18} /> Bootstrap
+                    </li>
+                    <li style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                      <SiFirebase color="#FFA611" size={18} /> Firebase (Learning)
+                    </li>
                   </ul>
                 </Grid>
               </Grid>
             </Grid>
           </Grid>
+
 
           <Divider sx={{ my: 4 }} />
 
@@ -115,6 +136,7 @@ const About = () => {
           </Typography>
           <Box sx={{ display: 'flex', }}>
             <Timeline position="alternate">
+
               <TimelineItem>
                 <TimelineSeparator>
                   <TimelineDot color="primary" />
@@ -133,7 +155,7 @@ const About = () => {
                   <TimelineConnector />
                 </TimelineSeparator>
                 <TimelineContent sx={{ textAlign: '' }}>
-                  <Typography fontWeight={600}>2022 - 2023</Typography>
+                  <Typography fontWeight={600}>2018 - 2024</Typography>
                   <Typography>Testing & Development Engineer</Typography>
                   <Typography variant="body2">Swastika Digital Systems</Typography>
                 </TimelineContent>
@@ -142,14 +164,28 @@ const About = () => {
               <TimelineItem>
                 <TimelineSeparator>
                   <TimelineDot color="primary" />
+                  <TimelineConnector />
                 </TimelineSeparator>
                 <TimelineContent sx={{ textAlign: '' }}>
-                  <Typography fontWeight={600}>2018 - 2022</Typography>
-                  <Typography>BE - EEE</Typography>
-                  <Typography variant="body2">Anna University</Typography>
+                  <Typography fontWeight={600}>2015 - 2018</Typography>
+                  <Typography>Bachelor Degree - EEE</Typography>
+                  <Typography variant="body2">St. Xavier's Catholic College of Engineering </Typography>
+                </TimelineContent>
+              </TimelineItem>
+
+               <TimelineItem>
+                <TimelineSeparator>
+                  <TimelineDot color="primary" />
+                  
+                </TimelineSeparator>
+                <TimelineContent sx={{ textAlign: '' }}>
+                  <Typography fontWeight={600}>2012 - 2015</Typography>
+                  <Typography>Diploma - EEE</Typography>
+                  <Typography variant="body2">Sun Inistitute Of Technology</Typography>
                 </TimelineContent>
               </TimelineItem>
             </Timeline>
+            
           </Box>
 
           <Divider sx={{ my: 4 }} />
@@ -169,10 +205,10 @@ const About = () => {
                   vishakkv.dev@gmail.com
                 </Link><br />
                 <strong>Phone:</strong>{' '}
-                <Link href="tel:+919876543210" sx={{ color: '#2e8bc0' }}>
-                  +91 98765 43210
-                </Link><br />
-                <strong>Location:</strong> Tamil Nadu, India
+                {/* <Link href="tel:+919876543210" sx={{ color: '#2e8bc0' }}> */}
+                  +91 9500754102 <br />
+                {/* </Link><br /> */}
+                <strong>Location:</strong> Kottar, Nagercoil,<br /> Kaniyakumari, TamilNadu.
               </Typography>
               <Box sx={{ mt: 2, display: 'flex', gap: 3, flexWrap: 'wrap' }}>
                 <Link href="https://github.com/vishakkv" target="_blank" sx={{ display: 'inline-flex', alignItems: 'center', color: '#2e8bc0' }}>
