@@ -3,6 +3,6 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  base: '/Porofolio/', // 👈 important for GitHub Pages
+  base: '/Portfolio/', // 👈 important for GitHub Pages
   plugins: [react()],
 });
