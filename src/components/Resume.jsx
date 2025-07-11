@@ -33,7 +33,7 @@ const Resume = () => {
           }}
         >
           <iframe
-            src={"/Portfolio/resume.pdf"}
+            src={"/portfolio/public/resume.pdf"}
             title="Resume PDF"
             width="100%"
             height="100%"
@@ -46,7 +46,7 @@ const Resume = () => {
           <Grid item xs={12} sm="auto">
             <Button
               variant="contained"
-              href={"/Portfolio/resume.pdf"}
+               href={`${import.meta.env.BASE_URL}resume.pdf`}
               download="Vishak_KV_Resume.pdf"
               startIcon={<DownloadIcon />}
               sx={{
