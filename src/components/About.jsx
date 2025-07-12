@@ -54,7 +54,7 @@ const About = () => {
             <Grid item xs={12} sm={8}>
               <Typography variant="body1" sx={{ color: '#1c1c1e', lineHeight: 1.8 }}>
                 I'm <strong>Vishak KV</strong>, a React Frontend Developer passionate about building dynamic, responsive user interfaces.
-                I hold a Bachelor's degree in <strong>Electrical and Electronics Engineering (EEE)</strong> from Anna University.
+                I hold a Bachelor's degree in <strong>Electrical and Electronics Engineering (EEE)</strong> from St. Xavier's Catholic College of Engineering .
                 <br /><br />
                 I worked at <strong>Swastika Digital Systems</strong> as a <strong>Testing and Development Engineer</strong>, gaining hands-on experience
                 with ESP32, ESP8266, and firmware development.
