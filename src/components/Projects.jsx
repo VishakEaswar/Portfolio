@@ -15,7 +15,7 @@ const sampleProjects = [
   {
     title: 'Portfolio Website',
     desc: 'A personal responsive portfolio built using React and Material UI.',
-    link: 'https://yourportfolio.com',
+    link: 'https://vishakeaswar.github.io/Portfolio',
     image: 'https://source.unsplash.com/featured/?portfolio,website',
   },
   {

@@ -9,7 +9,7 @@ import {
 import DownloadIcon from '@mui/icons-material/Download';
 
 const Resume = () => {
-  const resumeUrl = '/resume.pdf'; // Make sure this is inside the `public/` folder
+  const resumeUrl = '/resume.pdf';
 
   return (
     <Box sx={{ maxWidth: '1080px', mx: 'auto', mt: 8, px: 2 }}>
@@ -33,7 +33,7 @@ const Resume = () => {
           }}
         >
           <iframe
-            src={"/portfolio/public/resume.pdf"}
+            src={"/Portfolio/public/resume.pdf"}
             title="Resume PDF"
             width="100%"
             height="100%"
