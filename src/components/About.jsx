@@ -136,6 +136,17 @@ const About = () => {
           </Typography>
           <Box sx={{ display: 'flex', }}>
             <Timeline position="alternate">
+              <TimelineItem>
+                <TimelineSeparator>
+                  <TimelineDot color="primary" />
+                  <TimelineConnector />
+                </TimelineSeparator>
+                <TimelineContent sx={{ textAlign: '' }}>
+                  <Typography fontWeight={600}>2025 - Present</Typography>
+                  <Typography>Intern at Frontend Development  </Typography>
+                  <Typography variant="body2">Karka Software Academy</Typography>
+                </TimelineContent>
+              </TimelineItem>
 
               <TimelineItem>
                 <TimelineSeparator>
@@ -143,7 +154,7 @@ const About = () => {
                   <TimelineConnector />
                 </TimelineSeparator>
                 <TimelineContent sx={{ textAlign: '' }}>
-                  <Typography fontWeight={600}>2024</Typography>
+                  <Typography fontWeight={600}>2024-10 - 2024-12</Typography>
                   <Typography>Frontend Development Course</Typography>
                   <Typography variant="body2">Karka Software Academy</Typography>
                 </TimelineContent>
