@@ -143,7 +143,7 @@ const About = () => {
                 </TimelineSeparator>
                 <TimelineContent sx={{ textAlign: '' }}>
                   <Typography fontWeight={600}>2025 - Present</Typography>
-                  <Typography>Intern at Frontend Development  </Typography>
+                  <Typography>Intern at Karka Software Academy  </Typography>
                   <Typography variant="body2">Karka Software Academy</Typography>
                 </TimelineContent>
               </TimelineItem>
