@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Box,
   Typography,
@@ -8,29 +8,59 @@ import {
   CardActions,
   Button,
   CardMedia,
+  Dialog,
 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import Portfolio from '../assets/Portfolio.png';
+import HomePage from '../assets/HomePage.jpeg';
+import demo from '../assets/demo.gif'
 
 const sampleProjects = [
   {
     title: 'Portfolio Website',
-    desc: 'A personal responsive portfolio built using React and Material UI.',
+    desc: 'A modern, fully responsive personal portfolio website built using React Vite and Material UI, designed to showcase my skills, projects, and work experience as a frontend developer.',
     link: 'https://vishakeaswar.github.io/Portfolio',
-    image: 'https://source.unsplash.com/featured/?portfolio,website',
+    image: Portfolio,
   },
   {
-    title: 'Task Tracker',
-    desc: 'A task management app with CRUD and localStorage.',
-    link: 'https://yourtaskapp.com',
-    image: 'https://source.unsplash.com/featured/?productivity,tasks',
+    title: 'Blue Shade',
+    desc: 'This project is a fully responsive, frontend-only web application designed to simulate a modern e-commerce product browsing experience. The application demonstrates component-based design, seamless API integration, and user-centric UI/UX principles.',
+    link: 'https://vishakeaswar.github.io/flame-kart/',
+    image: HomePage,
+  },
+  {
+    title: 'Karka Software Academy Student Add Lead',
+    desc: 'This project is a fully responsive, frontend-only web application designed to simulate a modern e-commerce product browsing experience. The application demonstrates component-based design, seamless API integration, and user-centric UI/UX principles.',
+    link: 'https://github.com/VishakEaswar/Karka-Student-Lead.git',
+    image: demo,
   },
 ];
 
 const Projects = () => {
   const navigate = useNavigate();
+  const [openImage, setOpenImage] = useState(null);
+
+  const handleImageClick = (image) => {
+    setOpenImage(image);
+  };
+
+  const handleClose = () => {
+    setOpenImage(null);
+  };
 
   return (
-    <Box sx={{ maxWidth: '1200px', mx: 'auto', mt: 8, px: 2, display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
+    <Box
+      sx={{
+        maxWidth: '1200px',
+        mx: 'auto',
+        mt: 8,
+        px: 2,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
       <Typography
         variant="h4"
         sx={{ color: '#2e8bc0', fontWeight: 600, textAlign: 'center', mb: 4 }}
@@ -38,9 +68,9 @@ const Projects = () => {
         🚀 Projects
       </Typography>
 
-      <Grid container spacing={4}>
+      <Grid container spacing={4} sx={{display:'flex',justifyContent:"center",alignItems:'center'}}>
         {sampleProjects.map((project, idx) => (
-          <Grid size={{xs:12,sm:6,md:4}} key={idx}>
+          <Grid item xs={12} sm={6} md={4} key={idx}>
             <Card
               sx={{
                 height: '100%',
@@ -53,21 +83,29 @@ const Projects = () => {
                 },
               }}
             >
-              <Box sx={{ position: 'relative' }}>
+              <Box sx={{ overflow: 'hidden', height: '160px' }}>
                 <CardMedia
                   component="img"
-                  height="160"
                   image={project.image}
                   alt={project.title}
+                  onClick={() => handleImageClick(project.image)}
                   sx={{
-                    filter: 'brightness(0.95)',
-                    transition: '0.3s',
-                    '&:hover': { filter: 'brightness(0.8)' },
+                    height: '100%',
+                    width: '100%',
+                    objectFit: 'cover',
+                    transition: 'transform 0.5s ease',
+                    '&:hover': {
+                      transform: 'scale(1.2)',
+                      cursor: 'zoom-in',
+                    },
                   }}
                 />
               </Box>
               <CardContent>
-                <Typography variant="h6" sx={{ color: '#2e8bc0', fontWeight: 600 }}>
+                <Typography
+                  variant="h6"
+                  sx={{ color: '#2e8bc0', fontWeight: 600 }}
+                >
                   {project.title}
                 </Typography>
                 <Typography sx={{ mt: 1.5, color: '#444' }}>
@@ -97,60 +135,24 @@ const Projects = () => {
             </Card>
           </Grid>
         ))}
+      </Grid>
 
-        {/* 
-        <Grid size={{xs:12,sm:6,md:4}}>
-          <Card
-            sx={{
-              height: '100%',
-              borderRadius: 3,
-              transition: 'transform 0.3s, box-shadow 0.3s',
-              boxShadow: 3,
-              '&:hover': {
-                transform: 'translateY(-5px)',
-                boxShadow: 6,
-              },
-            }}
-          >
-            <CardMedia
-              component="img"
-              height="160"
-              image="https://source.unsplash.com/featured/?arcade,game"
-              alt="Game Preview"
-              sx={{
-                filter: 'brightness(0.95)',
-                transition: '0.3s',
-                '&:hover': { filter: 'brightness(0.8)' },
+      {/* Full Image Dialog */}
+      {openImage && (
+        <Dialog open={true} onClose={handleClose} maxWidth="md">
+          <Box sx={{ p: 2 }}>
+            <img
+              src={openImage}
+              alt="Full preview"
+              style={{
+                width: '100%',
+                height: 'auto',
+                borderRadius: '10px',
               }}
             />
-            <CardContent>
-              <Typography variant="h6" sx={{ color: '#2e8bc0', fontWeight: 600 }}>
-                🏁 Play Car Race Game
-              </Typography>
-              <Typography sx={{ mt: 1.5, color: '#444' }}>
-                A mini car dodging game. Press Enter to start. Arrow keys to move.
-              </Typography>
-            </CardContent>
-            <CardActions sx={{ px: 2, pb: 2 }}>
-              <Button
-                variant="contained"
-                onClick={() => navigate('/game')}
-                sx={{
-                  textTransform: 'none',
-                  backgroundColor: '#2e8bc0',
-                  fontWeight: 500,
-                  borderRadius: 2,
-                  '&:hover': {
-                    backgroundColor: '#1c6ca1',
-                  },
-                }}
-              >
-                Play Game
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid> */}
-      </Grid>
+          </Box>
+        </Dialog>
+      )}
 
       {/* Footer */}
       <Box sx={{ textAlign: 'center', mt: 6 }}>

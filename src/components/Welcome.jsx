@@ -36,7 +36,7 @@ const Welcome = () => {
               color: '#2e8bc0',
             }}
           >
-            Wel<span style={{ color: '#1c1c1e' }}>come_ I'm Vis</span>hak_
+            Wel<span style={{ color: '#1c1c1e' }}>come_ I'm Vis</span>hak K v_
           </Typography>
 
           <Typography variant="h5" sx={{ mt: 2, color: '#2e8bc0', fontWeight: 400 }}>
